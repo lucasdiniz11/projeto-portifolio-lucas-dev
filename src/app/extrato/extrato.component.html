@@ -1,0 +1,32 @@
+<section class="container">
+  <table class="tabela">
+    <thead>
+      <tr class="tabela__cabecalho">
+        <th class="tabela__cabecalho__conteudo">Valor</th>
+        <th class="tabela__cabecalho__conteudo">Destino</th>
+        <th class="tabela__cabecalho__conteudo">Data</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="transferir?.length > 0; else tabelaVazia">
+      <tr class="tabela__linha" *ngFor="let item of transferir">
+        <td class="tabela__conteudo">{{ item.valor | currency }}</td>
+        <td class="tabela__conteudo">{{ item.destino }}</td>
+        <td class="tabela__conteudo">{{ item.date | date: "short" }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #load>
+    <app-load [isLoading]="isLoading"></app-load>
+  </ng-template>
+
+  <ng-template #tabelaVazia>
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <p>Nenhuma transferência realizada até o momento</p>
+        </td>
+      </tr>
+    </tbody>
+  </ng-template>
+</section>
