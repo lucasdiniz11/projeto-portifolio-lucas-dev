@@ -1,7 +1,8 @@
 import { Transferencia } from '../models/transferencia.model';
 
 import { Component, Output, EventEmitter } from '@angular/core';
-import { TransferenciasService } from '../shered/services/transferencias.service';
+import { TransferenciasService } from 'src/app/shered/services/transferencias.service';
+
 
 @Component({
   selector: 'app-nova-transferencia',

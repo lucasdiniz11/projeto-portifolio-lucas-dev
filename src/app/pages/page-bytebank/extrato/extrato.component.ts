@@ -3,8 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Observer } from 'rxjs';
 
 import { Transferencia } from '../models/transferencia.model';
-import { LoadComponent } from '../shered/components/spinner/load.component';
-import { TransferenciasService } from '../shered/services/transferencias.service';
+import { TransferenciasService } from 'src/app/shered/services/transferencias.service';
 
 
 @Component({

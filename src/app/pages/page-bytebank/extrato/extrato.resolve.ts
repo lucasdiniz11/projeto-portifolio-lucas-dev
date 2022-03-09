@@ -3,7 +3,8 @@ import { delay, Observable } from 'rxjs';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
 
 import { Transferencia } from './../models/transferencia.model';
-import { TransferenciasService } from './../shered/services/transferencias.service';
+import { TransferenciasService } from 'src/app/shered/services/transferencias.service';
+
 
 
 @Injectable ({
